@@ -3,7 +3,7 @@ import { Contract } from "@ethersproject/contracts";
 import { getDefaultProvider } from "@ethersproject/providers";
 import { useQuery } from "@apollo/react-hooks";
 
-import { Body, ConnectButton, Header, Image, Link, Wrapper, SpaceWrapper, Title, ConnectWrapper, NavWrapper, TitleWrapper } from "./components";
+import { Body, ConnectButton, Header, Image, Link, Wrapper, SpaceWrapper, Title, ConnectWrapper, NavWrapper, TitleWrapper, Container, RowWrapper } from "./components";
 import useWeb3Modal from "./hooks/useWeb3Modal";
 
 import { addresses, abis } from "@project/contracts";
@@ -59,35 +59,36 @@ function App() {
   return (
     <div>
       <Body>
-        <Header>
-          <SpaceWrapper>
-            <TitleWrapper>
+        <Container>
+          <Header>
               <Title> Superfluid Lending Demo </Title>
-            </TitleWrapper>
-            <NavWrapper>
-              
-            </NavWrapper>
-            <WalletButton provider={provider} loadWeb3Modal={loadWeb3Modal} logoutOfWeb3Modal={logoutOfWeb3Modal} />
-          </SpaceWrapper>
-        </Header>
-        <Wrapper>
-          <BalancePanel name={"Contract"} userNetFlow={1} daixBalance={100} daiBalance={200} cDaiContractBalance={300} />
-        </Wrapper>
-        <Wrapper>
-          <BalancePanel name={"User"} userNetFlow={1} daixBalance={100} daiBalance={200} cDaiContractBalance={300} />
-        </Wrapper>
-        <Wrapper>
-          <AdminPanel/>
-        </Wrapper>
-        <Wrapper>
-          <MintingPanel/>
-        </Wrapper>
-        <Wrapper>
-          <RedeemPanel/>
-        </Wrapper>
-        <Wrapper>
+              <NavWrapper>  </NavWrapper>
+              <WalletButton provider={provider} loadWeb3Modal={loadWeb3Modal} logoutOfWeb3Modal={logoutOfWeb3Modal} />
+          </Header>  
+        </Container>
+
+        <Container>
+          <RowWrapper>
+            <BalancePanel name={"Contract"} userNetFlow={1} daixBalance={100} daiBalance={200} cDaiContractBalance={300} />
+            <BalancePanel name={"User"} userNetFlow={1} daixBalance={100} daiBalance={200} cDaiContractBalance={300} />
+          </RowWrapper>
+        </Container>
+    
+        <Container>
+          <RowWrapper>
+            <MintingPanel/>
+            <RedeemPanel/>
+          </RowWrapper>
+        </Container>
+
+        <Container>
           <Table/>
-        </Wrapper>
+        </Container>
+
+        <Container>
+          <AdminPanel/>
+        </Container>
+
       </Body>
     </div>
   );

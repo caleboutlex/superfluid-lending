@@ -18,7 +18,7 @@ export const Body = styled.body`
   line-height: 1.2em;
   justify-content: space-evenly;
   min-height: 100vh;
-
+  position: absolute; 
   background: #fafafa;
   background-image: url('https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
   background-position: center;
@@ -27,12 +27,7 @@ export const Body = styled.body`
 
 `;
 
-export const Label = styled.label`
-  width: 15%;
-  font-size: calc(2px + 1.6vmin);
-  font-weight: 600;
-  margin-left: 5px;
-`
+
 export const Title = styled.h2`
   font-size: calc(10px + 2vmin);
   font-weight: 800;
@@ -53,40 +48,65 @@ export const Link = styled.a.attrs({
   color: #fff;
 `
 
-export const Wrapper = styled.div`
-  width: 95%;
+
+
+
+export const Container = styled.div`
+  width: 100%;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+`
+
+export const RowWrapper = styled.div`
+  width: 100%;
+  display: flex; 
+  flex-wrap: no-wrap; 
+  flex-direction: row; 
+  justify-content: center; 
+`
+
+export const ColumnWrapper = styled.div`
+  width: 100%;
   display:flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 60px;
-  @media (max-width: 768px) {
-    margin: 120px 0 0 0;
-}
 `
-export const Flexwrapper = styled.div`
-  width: 70%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
-`
-export const InfoTextWrapper = styled.div`
-  width: 60%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+export const Wrapper = styled.div`
+  width: 100%;
+  display:flex; 
+  flex-direction: column; 
+  align-items: flex-start;
+
 `
 
-export const SpaceWrapper = styled.div`
+export const InputWrapper = styled.div`
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  margin: 20px;
+  display: flex; 
+  flex-direction: row; 
+  justify-content: flex-end; 
+  margin: 10px;
+  
 `
+export const Label = styled.div`
+  font-size: calc(2px + 1.6vmin);
+  font-weight: 600;
+  margin-right: 10px;
+  flex-wrap: no-wrap;
+`
+export const StyledInput = styled.input`
+    width: 50%;
+    padding: 5px; 
+    border-width: 3px;
+    border-radius: 5px;
+    border-color: #F37222;
+
+`
+
+
+
+
+
 export const ConnectWrapper = styled.div`
   width: 20%;
   font-size: calc(5px + 2vmin);
@@ -97,22 +117,9 @@ export const NavWrapper = styled.div`
   font-size: calc(5px + 2vmin);
   font-weight: 200;
 `
-export const TitleWrapper = styled.div`
-  min-width: 30%;
-  font-size: calc(5px + 2vmin);
-  font-weight: 200;
-`
 
-export const ImageWrap = styled.div`
-  width: 15%;
-  display:flex;
-  justify-content: flex-start;
-`
-export const Image = styled.img`
-  height: 7vmin;
-  margin-bottom: 16px;
-  pointer-events: none;
-`
+
+
 export const ConnectButton = styled.button`
   width: 90%;
   text-align: center;
@@ -126,15 +133,14 @@ export const ConnectButton = styled.button`
   font-weight: 600;
 
   background: #292C2E;
-  
- 
+
 `
 export const ButtonWrapper = styled.div`
   display: flex;
   flex-direction: row;
+
 `
 export const AdminButton = styled.button`
-  min-width: 15%;
   text-align: center;
   border-color: #141414;
   border-width: 2px;
@@ -150,7 +156,7 @@ export const AdminButton = styled.button`
 
 
 export const Button1 = styled.button`
-  min-width: 15%;
+
   text-align: center;
   border-color: #00787A;
   border-width: 2px;
@@ -166,7 +172,7 @@ export const Button1 = styled.button`
 
 `
 export const Button2 = styled.button`
-  min-width: 15%;
+
   text-align: center;
   border-color: #FB6107;
   border-width: 2px;
@@ -183,7 +189,7 @@ export const Button2 = styled.button`
 
 `
 export const Button3 = styled.button`
-  min-width: 15%;
+
   text-align: center;
   border-color: #8B2D8B;
   border-width: 2px;
@@ -216,38 +222,8 @@ export const LinkButton = styled.div`
   }
   
 `;
-export const StyledInput = styled.input`
-    width: 45%;
-    position: relative;
-    z-index: 1;
-    padding: 5px; 
-    border-width: 3px;
-    border-radius: 5px;
-    border-color: #F37222;
-    min-height: 25px;
-    ::placeholder,
-    ::-webkit-input-placeholder {
-      color: #00000;
-    }
-`
 
-export const StyledInfo = styled.div`
-    position: relative;
-    z-index: 1;
-    padding: 5px; 
-    border: none;
-    border-radius: 5px;
-    min-height: 25px;
-    min-width: 320px;
-    min-width: 400px;
-`
-export const StyledForm = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end ;
-    justify-content: center;
-    
-`
+
 
 export const StyledDiv = styled.div`
     display: flex;
@@ -258,32 +234,21 @@ export const StyledDiv = styled.div`
     margin: 10px;
 `
 
-export const StyledWrapper = styled.div`
-    border-color: #932c2b !important;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-    padding: 10px; 
-    display: flex; 
-    justify-content: center; 
-`
 export const Span = styled.span`
   ${({ color }) => `color: ${color}`}
   
 `;
 
-export const StyledTableHeader = styled.div`
-  display: flex;
-  flex-direction: row ;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  margin: 10px; 
-`
 export const Card = styled.div`
-  width: 100%;    
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
+  padding: 30px;
+  margin: 30px;
+
   color: #141414;
   background: #fafafa;
 
@@ -293,11 +258,14 @@ export const Card = styled.div`
   border-color: #141414;
 `
 export const InfoCard = styled.div`
-  width: 100%;    
+  width: 100%;  
+  min-height: 10vh;   
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  
   align-items: center;
+  justify-content: space-evenly;
+  margin: 30px;
+
   color: #fafafa;
 
   background: rgb(255,106,0);

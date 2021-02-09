@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useWeb3React } from '@web3-react/core';
 import { abis, addresses } from "@project/contracts"
 
-import { Button1, AdminButton, Button3, StyledDiv, SpaceWrapper, Card} from "../index";
+import { Button1, AdminButton, Button3, StyledDiv, RowWrapper, Card} from "../index";
 
 const AdminPanel = () => {
     const { account, library, chainId } = useWeb3React();
@@ -51,7 +51,8 @@ const AdminPanel = () => {
     
     return(
         <Card>
-            <SpaceWrapper>
+            <RowWrapper>
+              
               <StyledDiv>
                 <AdminButton onClick={onRebalance}>
                    Rebalance
@@ -63,22 +64,26 @@ const AdminPanel = () => {
                     Approve Dai
                 </AdminButton>
               </StyledDiv>
+
               <StyledDiv>
                 <AdminButton onClick={onWithdrawDai}>
                     Withdraw Dai
                 </AdminButton>
               </StyledDiv>
+
               <StyledDiv>
                 <AdminButton onClick={onWithdrawDaix}>
                   Withdraw Daix
                 </AdminButton>
               </StyledDiv>
+
               <StyledDiv>
                 <AdminButton onClick={onUpgradeAndApprove}>
                     Unwrap All User DaiX
                 </AdminButton>
               </StyledDiv>
-            </SpaceWrapper>
+
+            </RowWrapper>
         </Card>
     )
 

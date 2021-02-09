@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useWeb3React } from '@web3-react/core';
 import AnimatedNumber from "animated-number-react";
 
-import { Span, SpaceWrapper, StyledForm, InfoCard, Label } from "../index";
+import { Span, RowWrapper, StyledForm, InfoCard, Label } from "../index";
 
 const CurrentBalance = ({userNetFlow, daixBalance, name}) => {
     const { account, library, chainId } = useWeb3React();
@@ -30,7 +30,7 @@ const CurrentBalance = ({userNetFlow, daixBalance, name}) => {
 
     return(
         <InfoCard>
-            <SpaceWrapper>
+            <RowWrapper>
                 <Label> {name} Balance: </Label>  
                 <AnimatedNumber
                     value={daixBalanceFake}
@@ -44,7 +44,7 @@ const CurrentBalance = ({userNetFlow, daixBalance, name}) => {
                 <Span color={userNetFlow > 0 ? "green" : "red"}>
                 {flowForHumans(userNetFlow)}
                 </Span>
-            </SpaceWrapper>
+            </RowWrapper>
         </InfoCard>
     )
 }

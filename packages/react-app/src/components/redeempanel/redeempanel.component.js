@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useWeb3React } from '@web3-react/core';
 
 import { abis, addresses } from "@project/contracts"
-import { Note, Button1, Button2, Button3, StyledInput, Flexwrapper, InfoTextWrapper, StyledForm, StyledDiv, Card, Label } from "../index";
+import { Note, Button1, Button2, Button3, StyledInput, RowWrapper, Card, Label } from "../index";
 
 const RedeemPanel = () => {
     const { account, library, chainId } = useWeb3React();
@@ -90,24 +90,22 @@ const RedeemPanel = () => {
     return (
         <Card>
           <h2> Fund or Redeem NFT </h2>
-            <Flexwrapper>
+            <RowWrapper>
               <Label> ID:</Label>
               <StyledInput  value={totalPrice} 
                       onChange={handleChangeTotalPrice}
                   />
-            </Flexwrapper>  
-        <InfoTextWrapper>
+            </RowWrapper>  
+
             <Note>Fund the NFT with the list price to start the stream to the seller</Note>
             <Button1 onClick={onSubmit}> Fund </Button1>
-        </InfoTextWrapper> 
-        <InfoTextWrapper>
+      
             <Note> Close the agreement and send all pending funds to the seller </Note>
             <Button2 onClick={onSubmit}> Close </Button2>
-        </InfoTextWrapper>  
-        <InfoTextWrapper>
+
             <Note>Redeem the earnings and withdraw the NFT </Note>
             <Button3 onClick={onSubmit}> Redeem </Button3>
-        </InfoTextWrapper>         
+     
       </Card>
     ) 
 }

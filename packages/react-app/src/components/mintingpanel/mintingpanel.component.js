@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useWeb3React } from '@web3-react/core';
 
 import { abis, addresses } from "@project/contracts"
-import { Button1, StyledInput, Flexwrapper, InfoTextWrapper, Note, Card, Label } from "../index";
+import { Button1, StyledInput, InputWrapper, Note, Card, Label } from "../index";
 
 
 const MintingPanel = () => {
@@ -91,52 +91,46 @@ const MintingPanel = () => {
     return (
         <Card>
           <h2> Mint a agreement</h2>
-      
-            <Flexwrapper>
+            <InputWrapper>
               <Label> The total price:</Label>
               <StyledInput  value={totalPrice} 
                       onChange={handleChangeTotalPrice}
                   />
-            </Flexwrapper>
-            <Flexwrapper>
-              <Label> Downpayment:</Label>
+            </InputWrapper>
+            <InputWrapper>
+              <Label>Downpayment:</Label>
               <StyledInput  value={dwnpayment} 
                     onChange={handleChangeDownpayment}
                 />
-            </Flexwrapper>
-            <Flexwrapper>
+            </InputWrapper>
+            <InputWrapper>
               <Label> Buyer address: </Label>
               <StyledInput  value={buyer} 
                     onChange={handleChangeBuyer}
                 />
-            </Flexwrapper>
-            <Flexwrapper>
+            </InputWrapper>
+            <InputWrapper>
               <Label> Seller address:</Label>
               <StyledInput  value={seller} 
                     onChange={handleChangeSeller}
                 />
-            </Flexwrapper>
-            <Flexwrapper>
+            </InputWrapper>
+            <InputWrapper>
               <Label> Interest in %: </Label>
               <StyledInput  value={interestPercent} 
                     onChange={handleChangeInterestPercent}
                 />
-            </Flexwrapper>
-            <Flexwrapper>
+            </InputWrapper>
+            <InputWrapper>
                 <Label> Period in years: </Label>
                 <StyledInput  value={years} 
                     onChange={handleChangeYears}
                 />
-            </Flexwrapper>
-
-        <InfoTextWrapper>
+            </InputWrapper>
             <Note> 
-              Mint a NFT that represents the agreement between buyer and seller 
-              <br/> 
-              NFT can only be funded by the seller
+              Mint a NFT that represents the agreement between buyer and seller
             </Note>
-            <Button1 onClick={onSubmit}> Mint </Button1>
-        </InfoTextWrapper>     
+          <Button1 onClick={onSubmit}> Mint </Button1> 
       </Card>
     ) 
 }

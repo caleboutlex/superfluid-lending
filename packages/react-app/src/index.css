@@ -54,8 +54,8 @@ body .MuiInputBase-root {
 
 }
 
-td.MuiTableCell-body {
-  
+body .MuiTableSortLabel-root.MuiTableSortLabel-active {
+  color:rgb(252, 252, 252);
 }
 
 body .MuiSelect-icon {

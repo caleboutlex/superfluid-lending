@@ -2,7 +2,7 @@ import React from "react";
 import MaterialTable from "material-table";
 import Loader from 'react-loader-spinner'
 
-import { StyledDiv, Wrapper, ColumnWrapper, CenterWrapper } from "./table.styles"
+import { StyledDiv, CenterWrapper } from "./table.styles"
 import { Card } from "../index";
 
 
@@ -42,7 +42,7 @@ const Table = () => {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-              
+                backgroundColor: "#fafafa",
                 fontSize: "calc(6px + 0.8vmin)",
                 color: '#141414'
                }}

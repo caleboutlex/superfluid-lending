@@ -5,7 +5,7 @@ import { abis, addresses } from "@project/contracts"
 
 import { convertUnixToTimeStamp } from "../../utils/utils";
 
-import { Button1, StyledInput, Flexwrapper, StyledDiv, Card} from "../index";
+import { Button1, StyledInput, StyledDiv, Card, RowWrapper} from "../index";
 
 
 
@@ -39,13 +39,13 @@ const Info = () => {
 
     return (
         <Card>
-            <Flexwrapper>
+            <RowWrapper>
                 <StyledInput  
                     value={value} 
                     onChange={handleChange}
                 />
                 <Button1 onClick={fetchinfo}> Get Info </Button1>
-            </Flexwrapper>   
+            </RowWrapper>   
         </Card>
     )
 }
