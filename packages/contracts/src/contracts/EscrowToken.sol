@@ -41,7 +41,7 @@ contract EscrowToken is EscrowBase, ERC721("Escrow Investment Service","EIS"), I
             // if flow is stopped amountpersec will be 0, this means our contract does not have to alocate Daix to keep the stream going
             if (agreement.amountPerSec != 0) {
                 // getting the minimum basket amount based on daipersec
-                uint256 minBask = getMinBasket(agreement.amountPerSec, onemonth, 5);
+                uint256 minBask = getMinBasket(agreement.amountPerSec, oneyear, 5);
                 min = min.add(minBask);
             }
             min = min.add((i));
