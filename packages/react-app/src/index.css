@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Mono&display=swap");
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'PT Mono';
+  font-style: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ptmono/v8/9oRONYoBnWILk-9AnCIzM-Py.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover{
+  color: #554AC6;
+}
+
+
+
+body {
+  margin: 0;
+  font-family: 'PT Mono', normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+body .MuiPaper-elevation2 {
+  box-shadow: 0px 0px 0px 0px rgb(252, 252, 252), 0px 0px 0px 0px rgb(255, 255, 255), 0px 0px 0px 0px rgba(0,0,0,0.12);
+}
+
+body .MuiTableCell-root {
+  font-family: 'PT Mono', normal;
+   border-bottom-width: 0px; 
+
+
+}
+button.MuiIconButton-root {
+  
+}
+/* .MuiTablePagination-root */
+body .MuiTypography-root {
+  font-family: 'PT Mono', normal;
+  
+}
+body .MuiInputBase-root {
+  font-family: 'PT Mono', normal;
+
+}
+
+td.MuiTableCell-body {
+  
+}
+
+body .MuiSelect-icon {
+  
+}
+
+.MuiTableCell-body {
+  
+}
+
